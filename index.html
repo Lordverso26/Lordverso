@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d0a12">
+<title>Lordverso – jogos, webtoons, artes e contos</title>
+<meta name="description" content="Portfólio do Lordverso: jogos, webtoons, artes digitais, contos e um criador de avatar.">
+
+<!-- Fontes (Google Fonts). Sem internet o site usa fontes do sistema. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Permanent+Marker&display=swap">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==========================================================
+     CABEÇALHO – o menu leva às seções desta mesma página
+     ========================================================== -->
+<header class="topo">
+  <div class="container">
+    <a class="logo" href="#inicio">Lord<span>verso</span></a>
+    <nav class="menu" aria-label="Seções do site">
+      <a href="#inicio" class="ativo">Início</a>
+      <a href="#artes">Artes</a>
+      <a href="#jogos">Jogos</a>
+      <a href="#contos">Contos</a>
+      <a href="#avatar">Avatar</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#sugestoes">Sugestões</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ==========================================================
+       INÍCIO
+       ========================================================== -->
+  <div class="hero" id="inicio">
+    <div>
+      <p class="hero-oi">Ei, bem-vindo ao</p>
+      <h1><span>Lordverso</span></h1>
+      <p class="papeis">Jogos<i>•</i>Webtoons<i>•</i>Artes digitais<i>•</i>Contos</p>
+      <div class="acoes">
+        <a class="btn cheio" href="#artes">▶ Ver artes</a>
+        <a class="btn vazio" href="#avatar">Criar meu avatar ↗</a>
+      </div>
+    </div>
+
+    <div class="hero-arte">
+      <img src="imagens/personagem.jpg" alt="Personagem do Lordverso: pessoa de cabelo rosa e jaqueta azul com olhos arregalados">
+      <p class="fala">bora criar algo incrível!</p>
+      <span class="rabisco r1" aria-hidden="true">✦</span>
+      <span class="rabisco r2" aria-hidden="true">✺</span>
+      <span class="rabisco r3" aria-hidden="true">✧</span>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================
+       DESTAQUE – o que você quer que todo mundo veja primeiro
+       Troque o texto e o link; para uma imagem, ponha <img src="imagens/..." alt="..."> dentro de .tela
+       ========================================================== -->
+  <section>
+    <div class="painel destaque">
+      <div>
+        <h2>Em destaque</h2>
+        <p>O projeto mais novo do Lordverso. Jogue direto no navegador.</p>
+        <a class="btn cheio pequeno" href="#">Jogar agora</a><!-- TROCAR: link do projeto em destaque -->
+      </div>
+      <a class="tela" href="#" aria-label="Abrir o projeto em destaque"><!-- TROCAR: mesmo link -->
+        <span class="play" aria-hidden="true">▶</span>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       ARTES – linha do tempo (uma arte por ano) + card +18
+       Para outro ano, copie um bloco <figure class="marco"> e troque o ano e o título.
+       Para pôr a arte: dentro de .arte-ano, troque o texto por
+       <img src="imagens/arte-2022.jpg" alt="descrição da arte">
+       O número em --h (0 a 360) muda a cor do espaço que ainda não tem imagem.
+       ========================================================== -->
+  <section id="artes">
+    <div class="artes-grid">
+
+      <div class="painel">
+        <h2 class="titulo">Linha do tempo Lordverso</h2>
+        <p class="intro-sec">Uma arte de cada ano. Arraste para o lado para ver todas.</p>
+        <div class="tempo" tabindex="0" aria-label="Linha do tempo das artes, role para o lado">
+          <figure class="marco">
+            <b class="ano">2022</b>
+            <div class="arte-ano" style="--h:200"><span>sua arte de 2022</span></div>
+            <figcaption>Título da arte</figcaption>
+          </figure>
+          <figure class="marco">
+            <b class="ano">2023</b>
+            <div class="arte-ano" style="--h:300"><span>sua arte de 2023</span></div>
+            <figcaption>Título da arte</figcaption>
+          </figure>
+          <figure class="marco">
+            <b class="ano">2024</b>
+            <div class="arte-ano"><img src="imagens/personagem.jpg" alt="Personagem de cabelo rosa e jaqueta azul"></div>
+            <figcaption>Não consigo demorar a responder</figcaption>
+          </figure>
+          <figure class="marco">
+            <b class="ano">2025</b>
+            <div class="arte-ano" style="--h:20"><span>sua arte de 2025</span></div>
+            <figcaption>Título da arte</figcaption>
+          </figure>
+          <figure class="marco">
+            <b class="ano">2026</b>
+            <div class="arte-ano" style="--h:260"><span>sua arte de 2026</span></div>
+            <figcaption>Título da arte</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Card +18: troque o href pelo link da sua galeria adulta -->
+      <a class="painel adulto" href="#" aria-label="Artes +18, conteúdo só para maiores de 18 anos">
+        <span class="adulto-selo" aria-hidden="true">+18</span>
+        <h2>Artes +18</h2>
+        <p>Conteúdo só para maiores de 18 anos.</p>
+        <span class="btn cheio pequeno">Entrar</span>
+        <small>Ao entrar, você confirma que tem 18 anos ou mais.</small>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       JOGOS – 3 capinhas "em breve"
+       Quando um jogo estiver pronto: troque <div class="poster"> por
+       <a class="poster" href="LINK_DO_JOGO">, ponha <img src="imagens/capa.jpg" alt="Capa do jogo">
+       dentro e troque o texto "Em breve" pelo nome do jogo.
+       ========================================================== -->
+  <section id="jogos">
+    <div class="painel jogos-painel">
+      <div>
+        <h2 class="titulo">Jogos</h2>
+        <p class="intro-sec">Jogos que rodam no navegador e no celular.</p>
+        <!-- Quando tiver o APK, troque o href pelo caminho do arquivo, ex.: downloads/lordverso.apk -->
+        <div class="apk">
+          <p>Prefere jogar no celular? O app em APK vai ficar aqui.</p>
+          <a class="btn vazio pequeno" href="#">Baixar APK</a>
+        </div>
+      </div>
+      <div class="posters">
+        <div class="poster" style="--h:350" aria-label="Jogo, em breve"><span class="poster-tag">Jogo</span><span class="poster-breve">Em breve</span></div>
+        <div class="poster" style="--h:225" aria-label="Jogo, em breve"><span class="poster-tag">Jogo</span><span class="poster-breve">Em breve</span></div>
+        <div class="poster" style="--h:275" aria-label="Jogo, em breve"><span class="poster-tag">Jogo</span><span class="poster-breve">Em breve</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       CONTOS
+       Os contos ficam na pasta "meus contos" (conto-1.txt, conto-2.txt, conto-3.txt).
+       Para mudar um conto, edite o .txt dessa pasta; este HTML não precisa mexer.
+       ========================================================== -->
+  <section id="contos">
+    <div class="painel">
+      <h2 class="titulo">Contos</h2>
+      <!-- O contos.js troca estes 3 cartões de reserva pelos contos da pasta "meus contos".
+           Se der qualquer erro, estes cartões continuam aqui e o site não quebra. -->
+      <div class="contos" id="lista-contos">
+        <article class="conto">
+          <span class="aspas" aria-hidden="true">“</span>
+          <div><h3>Poço e ida</h3><p>Drama sobrenatural – Sete dias no fundo de um poço, e uma visita que explica tudo.</p></div>
+          <a class="btn vazio pequeno" href="conto.html?n=1">Ler</a>
+        </article>
+        <article class="conto breve">
+          <span class="aspas" aria-hidden="true">“</span>
+          <div><h3>Em breve</h3><p>Um novo conto está a caminho.</p></div>
+          <span class="conto-breve">Em breve</span>
+        </article>
+        <article class="conto breve">
+          <span class="aspas" aria-hidden="true">“</span>
+          <div><h3>Em breve</h3><p>Um novo conto está a caminho.</p></div>
+          <span class="conto-breve">Em breve</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       AVATAR (Picrew)
+       ========================================================== -->
+  <section id="avatar">
+    <div class="painel avatar">
+      <div>
+        <h2 class="titulo">Crie o seu avatar</h2>
+        <p>Monte seu personagem do seu jeito, escolhendo cabelo, roupa e cores. Depois é só salvar a imagem.</p>
+        <div class="acoes">
+          <a class="btn cheio" href="#">Abrir o criador ↗</a><!-- TROCAR: link do picrew -->
+        </div>
+      </div>
+      <div class="avatar-ex" aria-hidden="true">
+        <div style="--h:345">?</div>
+        <div style="--h:215">?</div>
+        <div style="--h:260">?</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       SOBRE MIM
+       ========================================================== -->
+  <section id="sobre">
+    <div class="painel sobre">
+      <div class="sobre-foto">
+        <!-- Foto ou desenho seu: apague o texto e coloque <img src="imagens/eu.jpg" alt="..."> -->
+        <span>sua foto ou autorretrato</span>
+      </div>
+      <div>
+        <h2 class="titulo">Sobre mim</h2>
+        <p>Eu sou o Lordverso e vivo criando coisas: jogos, webtoons, desenhos digitais e contos. Troque este texto pela sua história: como você começou, o que te inspira e o que as pessoas encontram por aqui.</p>
+        <ul class="fatos">
+          <li>Jogos</li><li>Webtoons</li><li>Artes digitais</li><li>Contos</li><li>Avatares</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       REDES SOCIAIS – Instagram, YouTube e X. Para acrescentar outra rede, copie uma linha <a class="rede">
+       ========================================================== -->
+  <section id="redes">
+    <div class="painel">
+      <h2 class="titulo">Onde me achar</h2>
+      <div class="redes">
+        <a class="rede" href="https://www.instagram.com/lordverso_oficial/" target="_blank" rel="noopener">Instagram <small>@lordverso_oficial</small></a>
+        <a class="rede" href="https://www.youtube.com/@lordverso_oficial" target="_blank" rel="noopener">YouTube <small>@lordverso_oficial</small></a>
+        <a class="rede" href="https://x.com/Lord_verso" target="_blank" rel="noopener">Twitter / X <small>@Lord_verso</small></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       SUGESTÕES E ELOGIOS
+       Esquerda: formulário (nome + mensagem).
+       Direita: mural, que mostra o arquivo mensagens.html.
+       Como funciona: o formulário manda a mensagem para um serviço (Formspree, grátis),
+       que guarda tudo e avisa você. As que você aprovar, copie para o mensagens.html.
+       ========================================================== -->
+  <section id="sugestoes">
+    <div class="painel contato">
+
+      <div>
+        <h2 class="titulo">Sugestões e elogios</h2>
+        <p class="intro-sec">Quer elogiar, sugerir algo para um jogo ou contar o que achou de uma história? Eu leio tudo.</p>
+        <form class="form" action="https://formspree.io/f/SEU_CODIGO" method="post"><!-- TROCAR: endereço do Formspree -->
+          <label for="nome">Seu nome
+            <input id="nome" name="nome" type="text" maxlength="40" autocomplete="nickname" required>
+          </label>
+          <label for="mensagem">Sua mensagem
+            <textarea id="mensagem" name="mensagem" maxlength="500" required></textarea>
+          </label>
+          <!-- campo escondido que barra robôs: deixe vazio e não apague -->
+          <input class="oculto" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn cheio" type="submit">Enviar mensagem</button>
+          <p class="aviso">Seu nome e sua mensagem podem aparecer no mural ao lado depois que eu ler. Não escreva dados pessoais.</p>
+        </form>
+      </div>
+
+      <div class="mural-caixa">
+        <h3>Mural de mensagens</h3>
+        <iframe class="mural-frame" src="mensagens.html" title="Mensagens dos visitantes" loading="lazy"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <b>Lordverso</b>
+    <span>© 2026 Lordverso. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<script src="contos.js" defer></script>
+</body>
+</html>

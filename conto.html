@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d0a12">
+<title>Conto – Lordverso</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Permanent+Marker&display=swap">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="container">
+    <a class="logo" href="index.html#inicio">Lord<span>verso</span></a>
+    <nav class="menu" aria-label="Voltar">
+      <a href="index.html#contos">← Todos os contos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- O conto é carregado aqui pelo contos.js, a partir da pasta "meus contos".
+       O endereço é conto.html?n=1 (primeiro conto), ?n=2, ?n=3 -->
+  <article class="painel leitor" id="leitor">
+    <p class="leitor-erro">Carregando o conto…</p>
+  </article>
+  <noscript><p class="leitor-erro">Ative o JavaScript para ler o conto.</p></noscript>
+</main>
+
+<footer>
+  <div class="container">
+    <b>Lordverso</b>
+    <span>© 2026 Lordverso. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<script src="contos.js" defer></script>
+</body>
+</html>

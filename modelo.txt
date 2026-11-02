@@ -1,0 +1,23 @@
+titulo: Título do conto
+genero: Gênero do conto
+frase: Uma frase que prenda o leitor logo de cara.
+autoria: Seu nome (opcional, pode apagar esta linha)
+dedicatoria: Uma dedicatória (opcional, pode apagar esta linha)
+aviso: Aviso de conteúdo para o leitor (opcional, pode apagar esta linha)
+---
+## Subtítulo de uma parte (opcional)
+
+Escreva o conto daqui para baixo. Deixe uma linha em branco entre um parágrafo e outro.
+
+Para uma quebra de linha dentro do mesmo parágrafo (como num verso), é só apertar Enter uma vez.
+
+* * * * *
+
+A linha de asteriscos acima vira o separador de cenas.
+
+COMO USAR ESTE ARQUIVO
+1. Copie o modelo e salve como conto-2.txt (ou conto-3.txt) nesta pasta.
+2. As linhas de cima, antes do ---, são os dados do cartão no site.
+3. Tudo depois do --- é o texto do conto.
+4. Pode trocar o texto quando quiser. Se o arquivo sumir ou der erro, o site continua de pé e só mostra "Em breve" no lugar.
+5. Este arquivo "modelo.txt" não aparece no site.
