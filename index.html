@@ -18,6 +18,7 @@
 
 <!-- ==========================================================
      CABEÇALHO – o menu leva às seções desta mesma página
+     (a ordem do menu é a mesma ordem das seções na página)
      ========================================================== -->
 <header class="topo">
   <div class="container">
@@ -25,11 +26,13 @@
     <nav class="menu" aria-label="Seções do site">
       <a href="#inicio" class="ativo">Início</a>
       <a href="#artes">Artes</a>
-      <a href="#jogos">Jogos</a>
       <a href="#contos">Contos</a>
+      <a href="#webtoons">Webtoons</a>
       <a href="#avatar">Avatar</a>
+      <a href="#jogos">Jogos</a>
       <a href="#sobre">Sobre</a>
       <a href="#sugestoes">Sugestões</a>
+      <a href="#redes">Redes</a>
     </nav>
   </div>
 </header>
@@ -51,8 +54,7 @@
     </div>
 
     <div class="hero-arte">
-      <img src="imagens/personagem.jpg" alt="Personagem do Lordverso: pessoa de cabelo rosa e jaqueta azul com olhos arregalados">
-      <p class="fala">bora criar algo incrível!</p>
+      <img src="imagens/personagem.png" alt="Personagem do Lordverso: pessoa de cabelo rosa e jaqueta azul com olhos arregalados">
       <span class="rabisco r1" aria-hidden="true">✦</span>
       <span class="rabisco r2" aria-hidden="true">✺</span>
       <span class="rabisco r3" aria-hidden="true">✧</span>
@@ -68,10 +70,10 @@
     <div class="painel destaque">
       <div>
         <h2>Em destaque</h2>
-        <p>O projeto mais novo do Lordverso. Jogue direto no navegador.</p>
-        <a class="btn cheio pequeno" href="#">Jogar agora</a><!-- TROCAR: link do projeto em destaque -->
+        <p>O projeto mais novo do Lordverso: o webtoon Inside. Leia direto no navegador.</p>
+        <a class="btn cheio pequeno" href="webtoon.html?n=1">Ler agora</a><!-- TROCAR: link do projeto em destaque -->
       </div>
-      <a class="tela" href="#" aria-label="Abrir o projeto em destaque"><!-- TROCAR: mesmo link -->
+      <a class="tela" href="webtoon.html?n=1" aria-label="Abrir o projeto em destaque"><!-- TROCAR: mesmo link -->
         <span class="play" aria-hidden="true">▶</span>
       </a>
     </div>
@@ -79,43 +81,53 @@
 
 
   <!-- ==========================================================
-       ARTES – linha do tempo (uma arte por ano) + card +18
-       Para outro ano, copie um bloco <figure class="marco"> e troque o ano e o título.
-       Para pôr a arte: dentro de .arte-ano, troque o texto por
-       <img src="imagens/arte-2022.jpg" alt="descrição da arte">
-       O número em --h (0 a 360) muda a cor do espaço que ainda não tem imagem.
+       ARTES – linha do tempo + card +18
+       As imagens ficam na pasta "artes anuais".
+       Ano com uma arte: copie um bloco <figure class="marco"> e troque o ano e o nome do arquivo.
+       Ano com duas artes: copie um bloco <figure class="marco duplo"> (tem dois .arte-ano).
+       Para pôr o título embaixo de uma arte, acrescente <figcaption>Título</figcaption>
+       logo depois do </div> do .arte-ano (só nos blocos de uma arte).
        ========================================================== -->
   <section id="artes">
     <div class="artes-grid">
 
       <div class="painel">
         <h2 class="titulo">Linha do tempo Lordverso</h2>
-        <p class="intro-sec">Uma arte de cada ano. Arraste para o lado para ver todas.</p>
+        <p class="intro-sec">Uma ou duas artes de cada ano, passando sozinhas. Toque numa arte para ver grande.</p>
         <div class="tempo" tabindex="0" aria-label="Linha do tempo das artes, role para o lado">
           <figure class="marco">
+            <b class="ano">2019</b>
+            <div class="arte-ano"><img src="artes%20anuais/2019.png" alt="Arte de 2019" loading="lazy"></div>
+          </figure>
+          <figure class="marco">
+            <b class="ano">2020</b>
+            <div class="arte-ano"><img src="artes%20anuais/2020.png" alt="Arte de 2020" loading="lazy"></div>
+          </figure>
+          <figure class="marco">
+            <b class="ano">2021</b>
+            <div class="arte-ano"><img src="artes%20anuais/2021.png" alt="Arte de 2021" loading="lazy"></div>
+          </figure>
+          <figure class="marco">
             <b class="ano">2022</b>
-            <div class="arte-ano" style="--h:200"><span>sua arte de 2022</span></div>
-            <figcaption>Título da arte</figcaption>
+            <div class="arte-ano"><img src="artes%20anuais/2022.png" alt="Arte de 2022" loading="lazy"></div>
           </figure>
           <figure class="marco">
             <b class="ano">2023</b>
-            <div class="arte-ano" style="--h:300"><span>sua arte de 2023</span></div>
-            <figcaption>Título da arte</figcaption>
+            <div class="arte-ano"><img src="artes%20anuais/2023.png" alt="Arte de 2023" loading="lazy"></div>
           </figure>
-          <figure class="marco">
+          <figure class="marco duplo">
             <b class="ano">2024</b>
-            <div class="arte-ano"><img src="imagens/personagem.jpg" alt="Personagem de cabelo rosa e jaqueta azul"></div>
-            <figcaption>Não consigo demorar a responder</figcaption>
+            <div class="par">
+              <div class="arte-ano"><img src="artes%20anuais/2024.jpg" alt="Arte de 2024" loading="lazy"></div>
+              <div class="arte-ano"><img src="artes%20anuais/2024b.jpg" alt="Outra arte de 2024" loading="lazy"></div>
+            </div>
           </figure>
-          <figure class="marco">
+          <figure class="marco duplo">
             <b class="ano">2025</b>
-            <div class="arte-ano" style="--h:20"><span>sua arte de 2025</span></div>
-            <figcaption>Título da arte</figcaption>
-          </figure>
-          <figure class="marco">
-            <b class="ano">2026</b>
-            <div class="arte-ano" style="--h:260"><span>sua arte de 2026</span></div>
-            <figcaption>Título da arte</figcaption>
+            <div class="par">
+              <div class="arte-ano"><img src="artes%20anuais/2025.jpg" alt="Arte de 2025" loading="lazy"></div>
+              <div class="arte-ano"><img src="artes%20anuais/2025b.jpg" alt="Outra arte de 2025" loading="lazy"></div>
+            </div>
           </figure>
         </div>
       </div>
@@ -129,32 +141,6 @@
         <small>Ao entrar, você confirma que tem 18 anos ou mais.</small>
       </a>
 
-    </div>
-  </section>
-
-
-  <!-- ==========================================================
-       JOGOS – 3 capinhas "em breve"
-       Quando um jogo estiver pronto: troque <div class="poster"> por
-       <a class="poster" href="LINK_DO_JOGO">, ponha <img src="imagens/capa.jpg" alt="Capa do jogo">
-       dentro e troque o texto "Em breve" pelo nome do jogo.
-       ========================================================== -->
-  <section id="jogos">
-    <div class="painel jogos-painel">
-      <div>
-        <h2 class="titulo">Jogos</h2>
-        <p class="intro-sec">Jogos que rodam no navegador e no celular.</p>
-        <!-- Quando tiver o APK, troque o href pelo caminho do arquivo, ex.: downloads/lordverso.apk -->
-        <div class="apk">
-          <p>Prefere jogar no celular? O app em APK vai ficar aqui.</p>
-          <a class="btn vazio pequeno" href="#">Baixar APK</a>
-        </div>
-      </div>
-      <div class="posters">
-        <div class="poster" style="--h:350" aria-label="Jogo, em breve"><span class="poster-tag">Jogo</span><span class="poster-breve">Em breve</span></div>
-        <div class="poster" style="--h:225" aria-label="Jogo, em breve"><span class="poster-tag">Jogo</span><span class="poster-breve">Em breve</span></div>
-        <div class="poster" style="--h:275" aria-label="Jogo, em breve"><span class="poster-tag">Jogo</span><span class="poster-breve">Em breve</span></div>
-      </div>
     </div>
   </section>
 
@@ -191,6 +177,42 @@
 
 
   <!-- ==========================================================
+       WEBTOONS – 3 capinhas
+       Os webtoons ficam na pasta "webtoons" (webtoon-1, webtoon-2, webtoon-3).
+       Cada pasta tem um info.txt e as páginas 01.jpg, 02.jpg...
+       Veja webtoons/modelo-info.txt. Este HTML não precisa mexer.
+       ========================================================== -->
+  <section id="webtoons">
+    <div class="painel">
+      <h2 class="titulo">Webtoons</h2>
+      <p class="intro-sec">Histórias em quadrinhos para ler rolando a tela.</p>
+      <!-- O webtoons.js troca estes 3 cartões de reserva pelos webtoons da pasta "webtoons".
+           Se der qualquer erro, estes cartões continuam aqui e o site não quebra. -->
+      <div class="wt-grade" id="lista-webtoons">
+        <a class="wt" href="webtoon.html?n=1" aria-label="Ler Inside.">
+          <div class="wt-capa" style="--h:270">
+            <img src="webtoons/webtoon-1/01.jpg" alt="Capa de Inside." loading="lazy">
+            <span class="poster-tag">Webtoon</span>
+          </div>
+          <h3>Inside.</h3>
+          <p>Série 1 – Uma noite, um sonho e um lugar onde não havia dor.</p>
+        </a>
+        <div class="wt breve" aria-label="Webtoon, em breve">
+          <div class="wt-capa" style="--h:340"><span class="poster-tag">Webtoon</span></div>
+          <h3>Em breve</h3>
+          <p>Um novo webtoon está a caminho.</p>
+        </div>
+        <div class="wt breve" aria-label="Webtoon, em breve">
+          <div class="wt-capa" style="--h:410"><span class="poster-tag">Webtoon</span></div>
+          <h3>Em breve</h3>
+          <p>Um novo webtoon está a caminho.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
        AVATAR (Picrew)
        ========================================================== -->
   <section id="avatar">
@@ -212,6 +234,32 @@
 
 
   <!-- ==========================================================
+       JOGOS – 3 capinhas "em breve"
+       Quando um jogo estiver pronto: troque <div class="poster"> por
+       <a class="poster" href="LINK_DO_JOGO">, ponha <img src="imagens/capa.jpg" alt="Capa do jogo">
+       dentro e troque o texto "Em breve" pelo nome do jogo.
+       ========================================================== -->
+  <section id="jogos">
+    <div class="painel jogos-painel">
+      <div>
+        <h2 class="titulo">Jogos</h2>
+        <p class="intro-sec">Jogos que rodam no navegador e no celular.</p>
+        <!-- Quando tiver o APK, troque o href pelo caminho do arquivo, ex.: downloads/lordverso.apk -->
+        <div class="apk">
+          <p>Prefere jogar no celular? O app em APK vai ficar aqui.</p>
+          <a class="btn vazio pequeno" href="#">Baixar APK</a>
+        </div>
+      </div>
+      <div class="posters">
+        <div class="poster" style="--h:350" aria-label="Jogo, em breve"><span class="poster-tag">Jogo</span><span class="poster-breve">Em breve</span></div>
+        <div class="poster" style="--h:225" aria-label="Jogo, em breve"><span class="poster-tag">Jogo</span><span class="poster-breve">Em breve</span></div>
+        <div class="poster" style="--h:275" aria-label="Jogo, em breve"><span class="poster-tag">Jogo</span><span class="poster-breve">Em breve</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
        SOBRE MIM
        ========================================================== -->
   <section id="sobre">
@@ -226,21 +274,6 @@
         <ul class="fatos">
           <li>Jogos</li><li>Webtoons</li><li>Artes digitais</li><li>Contos</li><li>Avatares</li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==========================================================
-       REDES SOCIAIS – Instagram, YouTube e X. Para acrescentar outra rede, copie uma linha <a class="rede">
-       ========================================================== -->
-  <section id="redes">
-    <div class="painel">
-      <h2 class="titulo">Onde me achar</h2>
-      <div class="redes">
-        <a class="rede" href="https://www.instagram.com/lordverso_oficial/" target="_blank" rel="noopener">Instagram <small>@lordverso_oficial</small></a>
-        <a class="rede" href="https://www.youtube.com/@lordverso_oficial" target="_blank" rel="noopener">YouTube <small>@lordverso_oficial</small></a>
-        <a class="rede" href="https://x.com/Lord_verso" target="_blank" rel="noopener">Twitter / X <small>@Lord_verso</small></a>
       </div>
     </div>
   </section>
@@ -281,6 +314,21 @@
     </div>
   </section>
 
+
+  <!-- ==========================================================
+       REDES SOCIAIS – Instagram, YouTube e X. Para acrescentar outra rede, copie uma linha <a class="rede">
+       ========================================================== -->
+  <section id="redes">
+    <div class="painel">
+      <h2 class="titulo">Onde me achar</h2>
+      <div class="redes">
+        <a class="rede" href="https://www.instagram.com/lordverso_oficial/" target="_blank" rel="noopener">Instagram <small>@lordverso_oficial</small></a>
+        <a class="rede" href="https://www.youtube.com/@lordverso_oficial" target="_blank" rel="noopener">YouTube <small>@lordverso_oficial</small></a>
+        <a class="rede" href="https://x.com/Lord_verso" target="_blank" rel="noopener">Twitter / X <small>@Lord_verso</small></a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
@@ -291,5 +339,8 @@
 </footer>
 
 <script src="contos.js" defer></script>
+<script src="webtoons.js" defer></script>
+<script src="galeria.js" defer></script>
+<script src="menu.js" defer></script>
 </body>
 </html>

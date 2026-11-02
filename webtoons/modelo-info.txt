@@ -1,0 +1,20 @@
+titulo: Título do webtoon
+genero: Gênero ou "Série 1"
+frase: Uma frase curta que prenda o leitor.
+
+COMO USAR (as linhas acima são o que aparece no cartão do site)
+
+Opcionais, acrescente só se precisar:
+paginas: 12        -> quantas páginas existem (se faltar, o site descobre sozinho)
+formato: jpg       -> jpg, png, jpeg ou webp (se faltar, usa jpg)
+capa: capa.jpg     -> imagem da capinha (se faltar, usa a página 01)
+aviso: Texto de aviso de conteúdo mostrado antes da leitura
+
+PASTAS E NOMES
+webtoons/webtoon-1/info.txt
+webtoons/webtoon-1/01.jpg   (primeira página, vira a capinha se não tiver "capa")
+webtoons/webtoon-1/02.jpg
+webtoons/webtoon-1/03.jpg ...
+Para o segundo webtoon, use a pasta webtoon-2; para o terceiro, webtoon-3.
+Use sempre dois dígitos nos números: 01, 02 ... 10, 11.
+Este arquivo não aparece no site.

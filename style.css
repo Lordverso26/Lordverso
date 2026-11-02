@@ -13,6 +13,7 @@
    7. Artes (linha do tempo e card +18)
    8. Jogos (capinhas)
    9. Contos
+   9c. Webtoons (capinhas e leitor)
   10. Avatar / Picrew
   11. Sobre mim
   12. Redes, sugestões e mural
@@ -80,9 +81,6 @@ section{margin-top:28px}
   content:"";position:absolute;left:0;right:-14px;bottom:-8px;height:6px;border-radius:6px;
   background:var(--rosa);transform:rotate(-1.5deg);
 }
-.topo-secao{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.ver-tudo{color:var(--rosa);font-weight:700;font-size:.95rem}
-.ver-tudo:hover{color:var(--lilas)}
 
 
 /* ==========================================================
@@ -143,11 +141,6 @@ section{margin-top:28px}
   border-radius:36px;border:4px solid var(--fundo);transform:rotate(-3deg);
   box-shadow:10px 10px 0 var(--azul);
 }
-.fala{
-  position:absolute;top:2%;left:-4%;z-index:2;max-width:200px;padding:12px 16px;
-  background:var(--azul);color:#fff;font:400 17px/1.15 var(--f-titulo);
-  border-radius:20px 20px 20px 4px;transform:rotate(-6deg);
-}
 .rabisco{position:absolute;font-size:34px;line-height:1;pointer-events:none}
 .r1{top:0;right:-2%;color:var(--lilas)}
 .r2{bottom:12%;left:-4%;color:var(--rosa);font-size:28px}
@@ -202,6 +195,9 @@ section{margin-top:28px}
 }
 .arte-ano img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .marco figcaption{margin-top:10px;font-size:.9rem;color:var(--suave)}
+/* ano com duas artes: ocupa duas colunas e mostra as duas lado a lado */
+.marco.duplo{grid-column:span 2}
+.marco.duplo .par{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 
 /* card +18 */
 .adulto{
@@ -367,8 +363,6 @@ footer b{font:400 20px/1 var(--f-titulo);color:var(--texto)}
 .conto.breve h3{color:var(--suave)}
 
 .leitor{max-width:720px;margin:32px auto 0}
-.leitor-voltar{display:inline-block;margin-bottom:18px;color:var(--rosa);font-weight:700}
-.leitor-voltar:hover{color:var(--lilas)}
 .leitor h1{font-size:clamp(34px,6vw,54px);margin-bottom:10px}
 .leitor-genero{color:var(--lilas);font-weight:700}
 .leitor-autoria{color:var(--suave);margin-top:4px}
@@ -380,3 +374,77 @@ footer b{font:400 20px/1 var(--f-titulo);color:var(--texto)}
 .leitor-texto hr{border:0;margin:2em 0;text-align:center;height:auto}
 .leitor-texto hr::before{content:"✦  ✦  ✦";color:var(--rosa);letter-spacing:.3em}
 .leitor-erro{color:var(--suave)}
+
+
+/* ==========================================================
+   7b. ARTES – rolagem automática e arte ampliada (galeria.js)
+   ========================================================== */
+.tempo.auto{scroll-snap-type:none}
+.arte-ano[data-foto]{cursor:zoom-in;transition:border-color .15s,transform .15s}
+.arte-ano[data-foto]:hover{border-color:var(--rosa);transform:translateY(-3px)}
+
+body.lb-aberto{overflow:hidden}
+.lightbox{
+  width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;
+  background:rgba(8,5,12,.95);color:var(--texto);
+}
+.lightbox[open]{display:grid;place-items:center}
+.lightbox::backdrop{background:rgba(8,5,12,.95)}
+.lb-fig{margin:0;display:grid;gap:12px;justify-items:center;max-width:92vw}
+.lb-fig img{
+  max-width:92vw;max-height:80vh;width:auto;height:auto;object-fit:contain;
+  border-radius:16px;border:3px solid var(--card);box-shadow:8px 8px 0 var(--azul);
+}
+.lb-fig figcaption{font:400 22px/1 var(--f-titulo);color:var(--lilas)}
+.lb-fechar,.lb-seta{
+  position:fixed;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;
+  background:var(--card);color:var(--texto);border:2px solid var(--lilas);cursor:pointer;
+  font:700 22px/1 var(--f-texto);transition:background .15s,transform .15s;
+}
+.lb-fechar:hover,.lb-seta:hover{background:var(--rosa);color:#1a0610;border-color:var(--rosa)}
+.lb-fechar{top:max(14px,env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px))}
+.lb-seta{top:50%;transform:translateY(-50%);font-size:32px;padding-bottom:4px}
+.lb-ant{left:max(14px,env(safe-area-inset-left,0px))}
+.lb-prox{right:max(14px,env(safe-area-inset-right,0px))}
+@media (max-width:820px){
+  .lb-seta{top:auto;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:none}
+  .lb-fig img{max-height:74vh}
+}
+@media (prefers-reduced-motion:reduce){
+  .arte-ano[data-foto],.lb-fechar,.lb-seta{transition:none}
+}
+
+
+/* ==========================================================
+   9c. WEBTOONS – capinhas na página inicial e leitor (webtoons.js)
+   ========================================================== */
+.wt-grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.wt{display:block;transition:transform .2s}
+a.wt:hover{transform:translateY(-4px)}
+.wt-capa{
+  position:relative;aspect-ratio:2/3;border-radius:16px;overflow:hidden;
+  background:linear-gradient(170deg,hsl(var(--h,340) 70% 45%),hsl(calc(var(--h,340) + 40) 65% 14%));
+  border:1px solid var(--linha);transition:box-shadow .2s;
+}
+.wt-capa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+a.wt:hover .wt-capa{box-shadow:0 14px 30px rgba(0,0,0,.55)}
+.wt.breve .wt-capa::before{
+  content:"?";position:absolute;inset:0;display:grid;place-items:center;
+  font:400 clamp(60px,9vw,110px)/1 var(--f-titulo);color:rgba(255,255,255,.16);
+}
+.wt h3{font-size:22px;margin-top:12px}
+.wt p{color:var(--suave);font-size:.95rem;margin-top:4px}
+.wt.breve h3{color:var(--suave)}
+
+.leitor-wt{max-width:820px;padding:24px}
+.wt-topo{text-align:center}
+.wt-paginas{margin-top:24px;border-radius:16px;overflow:hidden;background:var(--card)}
+.wt-pag{display:block;width:100%;height:auto}
+.wt-fim{margin-top:28px;text-align:center}
+@media (max-width:820px){
+  .wt-grade{grid-template-columns:minmax(0,1fr);max-width:320px;margin-inline:auto}
+  .leitor-wt{padding:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  .wt,.wt-capa{transition:none}
+}

@@ -1,0 +1,5 @@
+titulo: Inside.
+genero: Série 1
+frase: Uma noite, um sonho e um lugar onde não havia dor.
+paginas: 6
+formato: jpg
