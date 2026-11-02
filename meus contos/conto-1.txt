@@ -1,8 +1,8 @@
 titulo: Poço e ida
 genero: Drama sobrenatural
 frase: Sete dias no fundo de um poço, e uma visita que explica tudo.
-autoria: Karla Alencar
-dedicatoria: Em memória de Amora <3
+autoria: Lord
+dedicatoria: Em memória de Amora <3 (Karla Alencar)
 ---
 ## Sétimo Dia
 
